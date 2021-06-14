@@ -13,14 +13,15 @@ class Player {
         if (this.y >= height - this.diameter) {
             this.y = height - this.diameter;
         }
-        console.log(this.y);
-
-    }
-    moveLeft() {
-
-    }
-
-    moveRight() {
+        if (keyIsDown(LEFT_ARROW)){
+            this.x -= 3;
+            console.log(this.x);
+        }
+        if (keyIsDown(RIGHT_ARROW)){
+            this.x += 3;
+            console.log(this.x);
+        }
+        
 
     }
 }
