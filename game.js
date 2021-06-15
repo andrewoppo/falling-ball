@@ -16,7 +16,11 @@ class Game {
         this.obstacles.forEach(obstacle => {
             obstacle.draw();
             //console.log('obstacle');
+            if (obstacle.collision(this.player)) {
+                this.player.velocity = -2;
+            }
         });
         this.player.draw();
+
      }
 }
