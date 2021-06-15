@@ -18,11 +18,12 @@ class Game {
             //console.log('obstacle');
             if (obstacle.collision(this.player)) {
                 this.player.velocity = -2;
-            }
-            if (!obstacle.collision(this.player)) {
+            } 
+            if (obstacle.collisionGap(this.player)) {
                 this.player.velocity = 2;
             }
-        });
+        });       
+
         this.player.draw();
 
      }

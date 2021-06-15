@@ -10,15 +10,15 @@ class Player {
         circle(this.x, this.y, this.diameter);
         fill('blue');
         
-        if (this.y >= height - this.diameter) {
-            this.y = height - this.diameter;
+        if (this.y >= height - this.diameter - 10) {
+            this.y = height - this.diameter - 10;
         }
         if (keyIsDown(LEFT_ARROW)){
-            this.x -= 3;
+            this.x -= 5;
             console.log(this.x);
         }
         if (keyIsDown(RIGHT_ARROW)){
-            this.x += 3;
+            this.x += 5;
             console.log(this.x);
         }
         

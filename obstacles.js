@@ -24,12 +24,13 @@ class Obstacle {
 
     collision(ballCoords) {
         const gapMiddle = this.rectX + this.rectWidth / 2;
-        const ballBottom = ballCoords.y + ballCoords.diameter;
-        const ballMiddle = ballCoords.x + ballCoords.diameter / 2;
-        // console.log(ballCoords)
-        // console.log(this.rectX)
-        // console.log(gapMiddle)
-        if (ballBottom === this.lineY && dist(gapMiddle, this.lineY, ballMiddle, ballBottom) > 15) {
+        //wy when i try to make this in the midde does it start skiping lines
+        const ballMiddleY = ballCoords.y + ballCoords.diameter;
+        const ballMiddleX = ballCoords.x + ballCoords.diameter / 2;
+        // console.log('bc - ' + ballCoords.x + ballCoords.y);
+        // console.log('gm - ' + gapMiddle);
+        // console.log('bb - ' + ballBottom);
+        if (ballMiddleY === this.lineY && dist(gapMiddle, this.lineY, ballMiddleX, ballMiddleY) > 17) {
             //console.log('true');
             return true;
         } else {
@@ -38,8 +39,16 @@ class Obstacle {
         }
        
     }
-
-    collisionGap() {
-        
+    collisionGap(ballCoords) {
+        const gapMiddle = this.rectX + this.rectWidth / 2;
+        const ballMiddleY = ballCoords.y + ballCoords.diameter;
+        const ballMiddleX = ballCoords.x + ballCoords.diameter / 2;
+        if (dist(gapMiddle, this.lineY, ballMiddleX, ballMiddleY) <= 17) {
+            //console.log('true');
+            return true;
+        } else {
+            //console.log('false');
+            return false;
+        }
     }
 }
