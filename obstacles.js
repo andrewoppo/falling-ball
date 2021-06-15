@@ -17,6 +17,7 @@ class Obstacle {
         fill('white');
         strokeWeight(0);
         rect(this.rectX, this.lineY - 3, this.rectWidth, this.rectHeight);
+        console.log(this.rectX)
         pop();
     }
 // start back here:
@@ -25,12 +26,20 @@ class Obstacle {
         const gapMiddle = this.rectX + this.rectWidth / 2;
         const ballBottom = ballCoords.y + ballCoords.diameter;
         const ballMiddle = ballCoords.x + ballCoords.diameter / 2;
+        // console.log(ballCoords)
+        // console.log(this.rectX)
+        // console.log(gapMiddle)
         if (ballBottom === this.lineY && dist(gapMiddle, this.lineY, ballMiddle, ballBottom) > 15) {
-            console.log('true');
+            //console.log('true');
             return true;
         } else {
-            console.log('false');
+            //console.log('false');
             return false;
         }
+       
+    }
+
+    collisionGap() {
+        
     }
 }

@@ -19,6 +19,9 @@ class Game {
             if (obstacle.collision(this.player)) {
                 this.player.velocity = -2;
             }
+            if (!obstacle.collision(this.player)) {
+                this.player.velocity = 2;
+            }
         });
         this.player.draw();
 
