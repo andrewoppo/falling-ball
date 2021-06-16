@@ -8,10 +8,10 @@ class Player {
     draw () {
         this.y += this.velocity;
         circle(this.x, this.y, this.diameter);
-        fill('blue');
+        fill('black');
         
-        if (this.y >= height - this.diameter / 2) {
-            this.y = height - this.diameter / 2;
+        if (this.y >= height - (this.diameter + 10)) {
+            this.y = height - (this.diameter+ 10);
         }
         if (this.x >= width - this.diameter / 2) {
             this.x = width - this.diameter / 2;

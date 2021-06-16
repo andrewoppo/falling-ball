@@ -25,12 +25,12 @@ class Obstacle {
     collision(ballCoords) {
         let gapMiddle = this.rectX + this.rectWidth / 2;
         //wy when i try to make this in the midde does it start skiping lines
-        let ballMiddleY = ballCoords.y + ballCoords.diameter;
+        let ballMiddleY = ballCoords.y + (ballCoords.diameter / 2);
         let ballMiddleX = ballCoords.x + (ballCoords.diameter / 2) - 8;
         // console.log('bc - ' + ballCoords.x + ballCoords.y);
         // console.log('gm - ' + gapMiddle);
         // console.log('bb - ' + ballBottom);
-        if (ballMiddleY === this.lineY && dist(gapMiddle, this.lineY, ballMiddleX, ballMiddleY) > 20) {
+        if (Math.abs(ballMiddleY - this.lineY) < 5 && dist(gapMiddle, this.lineY, ballMiddleX, ballMiddleY) > 20) {
            console.log(ballCoords.y);
             return true;
         } else {
