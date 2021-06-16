@@ -22,9 +22,14 @@ class Game {
             if (obstacle.collisionGap(this.player)) {
                 this.player.velocity = 2;
             }
-        });       
+        });   
 
         this.player.draw();
 
      }
+    checkPlayerStatus() {
+        if (this.player.y >= 0) {
+            return true;
+        }
+    }
 }
