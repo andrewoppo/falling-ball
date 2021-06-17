@@ -24,11 +24,11 @@ class Player {
             this.x = 0 + this.diameter / 2;
         }
         if (keyIsDown(LEFT_ARROW)){
-            this.x -= 5;
+            this.x -= 8;
            // console.log(this.x);
         }
         if (keyIsDown(RIGHT_ARROW)){
-            this.x += 5;
+            this.x += 8;
            // console.log(this.x);
         }
         

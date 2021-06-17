@@ -1,17 +1,9 @@
 const game = new Game();
 let timerValue = 0;
-// let pressStartFont;
 
-// function fontRead() {
-//     fontReady = true;
-// }
-
-// function preload() {
-//   game.preload();
-// }
 
 function setup() {
-    //mode = 0;
+    // song = loadSound("assets/574744__badoink__there-is-hope.wav");
     createCanvas(500, 500);
     setInterval(timer, 100);
     // textFont(pressStartFont);

@@ -1,6 +1,7 @@
 class Obstacle {
     constructor() {
         this.velocity = 2;
+        //this.gravity = 0.0001;
         this.lineY = height;
         this.rectWidth = 50;
         this.rectX = this.rectWidth + (Math.random() * (500 - this.rectWidth*2));
@@ -8,7 +9,9 @@ class Obstacle {
     }
 
     draw() {
+        //this.velocity -= this.gravity;
         this.lineY -= this.velocity;
+        //console.log(this.velocity);
         push();
         strokeWeight(5);
         line(0, this.lineY, width, this.lineY);
@@ -31,7 +34,7 @@ class Obstacle {
         // console.log('gm - ' + gapMiddle);
         // console.log('bb - ' + ballBottom);
         if (Math.abs(ballMiddleY - this.lineY) < 5 && dist(gapMiddle, this.lineY, ballMiddleX, ballMiddleY) > 20) {
-           console.log(ballCoords.y);
+           //console.log(ballCoords.y);
             return true;
         } else {
             //console.log('false');
