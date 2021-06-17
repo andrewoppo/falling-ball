@@ -24,6 +24,7 @@ class Player {
             this.x = 0 + this.diameter / 2;
         }
         if (keyIsDown(LEFT_ARROW)){
+            uerStartAudio();
             this.x -= 8;
            // console.log(this.x);
         }
