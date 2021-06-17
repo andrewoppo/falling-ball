@@ -19,8 +19,6 @@ class Game {
     draw() {
         clear();
         if (frameCount === 1) this.song.play();
-        if (this.song.isPlaying() === false ) {
-            this.song.play() }
         if (this.spawnRate > 31 && frameCount % 40 === 0) {
             this.spawnRate -= .11;
         }
