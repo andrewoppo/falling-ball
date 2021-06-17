@@ -6,9 +6,9 @@ class Game {
         // this.player = new Player ();
         
     }
-    preload() {
-        this.song = loadSound("574744__badoink__there-is-hope.wav");
-    }
+    // preload() {
+    //     this.song = loadSound("574744__badoink__there-is-hope.wav");
+    // }
     setup() {
         this.player = new Player ();
     }
@@ -18,7 +18,7 @@ class Game {
 
     draw() {
         clear();
-        if (frameCount === 1) this.song.play();
+        // if (frameCount === 1) this.song.play();
         // if (this.song.isPlaying() === false ) {
         //     this.song.play(); 
         // }
