@@ -1,16 +1,16 @@
 class Game {
     constructor() {
         this.obstacles = [];
-        this.player = new Player ();
+        // this.player = new Player ();
         
     }
-    // setup() {
-    //     this.player = new Player ();
-    // }
-    preload() {
-        this.player.preload();
+    setup() {
+        this.player = new Player ();
     }
-    
+    // preload() {
+    //     this.player.preload();
+    // }
+
     draw() {
         clear();
         if (frameCount % 50 === 0) {

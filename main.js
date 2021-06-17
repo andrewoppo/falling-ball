@@ -6,9 +6,9 @@ let timerValue = 0;
 //     fontReady = true;
 // }
 
-function preload() {
-  game.preload();
-}
+// function preload() {
+//   game.preload();
+// }
 
 function setup() {
     //mode = 0;
