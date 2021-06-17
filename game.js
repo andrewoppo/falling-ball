@@ -7,7 +7,7 @@ class Game {
         
     }
     preload() {
-        this.song = loadSound("assets/574744__badoink__there-is-hope.wav");
+        this.song = loadSound("574744__badoink__there-is-hope.wav");
     }
     setup() {
         this.player = new Player ();
