@@ -6,9 +6,9 @@ let timerValue = 0;
 //     fontReady = true;
 // }
 
-// function preload() {
-//   pressStartFont = loadFont('/C:/Users/Andrew/Documents/assets/PressStart2P-Regular.ttf');
-// }
+function preload() {
+  game.preload();
+}
 
 function setup() {
     //mode = 0;
