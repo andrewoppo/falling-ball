@@ -22,8 +22,8 @@ class Game {
         // if (this.song.isPlaying() === false ) {
         //     this.song.play(); 
         // }
-        if (this.spawnRate > 31 && frameCount % 40 === 0) {
-            this.spawnRate -= .11;
+        if (this.spawnRate > 28 && frameCount % 38 === 0) {
+            this.spawnRate -= .12;
         }
         if (frameCount % Math.floor(this.spawnRate) === 0) {
             this.obstacles.push(new Obstacle());
